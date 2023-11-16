@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Cars</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #animationCanvas {
+            border: 1px solid black;
+            width: 1000px; /* Set the width of the canvas */
+            height: 700px; /* Set the height of the canvas */
+            background-color: #333; /* Dark grey background */
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        .radio-button {
+            display: none;
+        }
+        .radio-label {
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            background: linear-gradient(to right, #6e48aa, #9d50bb);
+            color: white;
+            margin: 0 10px; /* Spacing between buttons */
+        }
+        .radio-button:checked + .radio-label {
+            border-color: #222;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animated Cars</h1>
+    <canvas id="animationCanvas" width="1200" height="900"></canvas> <!-- Canvas with specified size -->
+
+    <!-- Control buttons for animation -->
+    <div class="controls">
+        <!-- Radio button to start all cars -->
+        <input type="radio" id="startAll" name="animationControl" class="radio-button" onclick="startAllCars()">
+        <label for="startAll" class="radio-label">Start All Cars</label>
+
+        <!-- Radio button to start cars one by one -->
+        <input type="radio" id="startOneByOne" name="animationControl" class="radio-button" onclick="startOneCar()">
+        <label for="startOneByOne" class="radio-label">Start Cars One by One</label>
+
+        <!-- Radio button to reset cars -->
+        <input type="radio" id="reset" name="animationControl" class="radio-button" onclick="resetCars()">
+        <label for="reset" class="radio-label">Reset Cars</label>
+    </div>
+
+    <!-- Speed control slider for cars -->
+    Cars Speed: <input type="range" id="speedControl" min="0" max="100" value="50">
+
+    <!-- Link to the JavaScript file for animation -->
+    <script src="animation.js"></script>
+</body>
+</html>
