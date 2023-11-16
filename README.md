@@ -15,7 +15,7 @@ To run this web application locally, follow these steps:
 
 1. Clone this repository to your local machine.
 
-   git clone https://github.com/your-username/animated-cars.git
+   git clone https://github.com/raimoncoding/animated_cars_webapp.git
 
 Open the index.html file in your web browser.
 
